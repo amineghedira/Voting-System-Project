@@ -28,7 +28,7 @@ public class UserResource {
         List<VotingPeriod> votingPeriods = votingPeriodService.fetchAllVotingPeriods() ;
         return new ResponseEntity<>(votingPeriods, HttpStatus.OK);
     }
-    @GetMapping("/CurrentVotingPeriod/")
+    @GetMapping("/vote/")
     public ResponseEntity<VotingPeriod> getLatestVotingPeriod(HttpServletRequest request){
         VotingPeriod votingPeriod = votingPeriodService.fetchLatestVotingPeriod() ;
         return new ResponseEntity<>(votingPeriod, HttpStatus.OK);
